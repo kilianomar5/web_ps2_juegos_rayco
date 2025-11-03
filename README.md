@@ -8,3 +8,5 @@ Crear un tipo de post llamado videojuegos para los juegos. No es una entrada con
 Las noticias sí serán entradas.
 
 Recuerden que la plantilla tiene que ser full responsive.
+
+<img width="433" height="320" alt="logo" src="https://github.com/user-attachments/assets/c3b4df45-8f51-45f3-aa61-8774126cdf8f" />
