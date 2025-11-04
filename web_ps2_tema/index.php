@@ -8,19 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header>
-    <div class="logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
-    </div>
-
-    <nav>
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'menu_principal'
-        ));
-        ?>
-    </nav>
-</header>
+<header><?php get_header(); ?></header>
 
 <main>
     <?php if (have_posts()) : ?>
@@ -39,6 +27,30 @@
     <?php endif; ?>
 </main>
 
-<?php get_footer(); ?>
+<footer>
+    <div class="footer-menus">
+        <div class="footer-legal">
+            <h4>Enlaces Legales</h4>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'menu_legal',
+                'container' => false
+            ));
+            ?>
+        </div>
+
+        <div class="footer-social">
+            <h4>Redes Sociales</h4>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'menu_social',
+                'container' => false
+            ));
+            ?>
+        </div>
+    </div>
+</footer>
+
+<?php wp_footer(); ?>
 </body>
 </html>

@@ -1,48 +1,74 @@
 /*
 Theme Name: Web PS2 Tema
 Author: Kilian
-Description: Tema básico de web ps2 con noticias de estas.
-Version: 1.0
+Description: Tema básico de web PS2 con noticias y estilo moderno.
+Version: 1.1
 Text Domain: web_ps2_tema
 */
 
+/* ======== ESTILOS BASE ======== */
 body {
-  font-family: Arial, sans-serif;
-  background-color: antiquewhite;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ======== CABECERA ======== */
 header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 header img {
-  height: 50px;
+  height: 55px;
   vertical-align: middle;
 }
 
+/* ======== NAVEGACIÓN ======== */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 25px;
+  margin: 15px 0 0;
   padding: 0;
-  margin: 0;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: color 0.3s, background 0.3s;
 }
 
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 30px;
+  padding: 40px 20px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -50,174 +76,416 @@ main {
 article {
   flex: 1 1 300px;
   max-width: 350px;
-  background: white;
-  padding: 10px;
-  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+h2, h3 {
+  color: #0078ff;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 h3 {
-  color: #007bff;
-  font-weight: bold;
-  margin-top: -10px;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-footer {
-  background-color: #222831;
-  color: #eeeeee;
-  color: white;
-  padding: 20px;
+p {
+  margin: 0 0 10px;
+}
+
+/* ======== TARJETAS DE JUEGOS ======== */
+.juegos-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.juego-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 340px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.juego-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.juego-card h3 {
+  font-size: 1.2rem;
+  color: #111;
+  font-weight: 600;
+  margin: 15px 15px 5px;
+}
+
+.juego-card p {
+  margin: 0 15px 20px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.juego-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== ESTILO DE PÁGINA HISTORIA PS2 ====== */
+.page-id-308 main,
+.page-id-308 .entry-content {
+  display: flex;
+  justify-content: center;
+}
+
+.historia-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin: 40px 20px;
+}
+
+.historia-container h2,
+.historia-container h3 {
+  color: #0078ff;
+  margin-bottom: 15px;
+}
+
+.historia-container p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.historia-container a.wp-block-button__link,
+.historia-container .boton-historia {
+  background-color: #0078ff;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.historia-container a.wp-block-button__link:hover,
+.historia-container .boton-historia:hover {
+  background-color: #005fcc;
+}
+
+.historia-container img {
+  display: block;
+  margin: 25px auto;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* ====== Línea de tiempo ====== */
+.timeline {
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.timeline-item img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #444;
+}
+
+/* ====== Juegos icónicos ====== */
+.juegos-ps2 {
+  margin-top: 40px;
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+}
+
+.juego-item {
   text-align: center;
-  list-style: none;
+  margin-bottom: 30px;
+}
+
+.juego-item img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.juego-item h4 {
+  color: #111;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background-color: #151515;
+  color: #eeeeee;
+  padding: 30px 20px;
+  text-align: center;
 }
 
 .footer-menus {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  list-style: none;
+  gap: 15px;
 }
 
 .footer-legal, .footer-social {
   margin: 10px 0;
-  list-style: none;
 }
 
 .footer-legal ul, .footer-social ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-}
-
-.footer-legal a:hover, .footer-social a:hover {
-  color: #fff;
-}
-
-.footer-social ul {
+  margin: 0;
   display: flex;
   gap: 10px;
-  list-style: none;
-  padding: 0;
 }
 
-/* Movil */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+.footer-social a {
+  color: #ddd;
+  transition: color 0.3s;
+}
 
-  nav li {
-    margin-bottom: 10px;
-  }
+.footer-social a:hover {
+  color: #ffcc00;
+}
 
-  main {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 40px;
-  }
+@media (min-width: 1024px) {
 
-  header img {
-    height: 40px;
-  }
-
-  article {
-    width: 90%;
-    max-width: 500px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-  }
-
-  .logo {
+  /* Contenedor general */
+  .historia-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 60px 80px;
+    max-width: 1100px;
+    margin: 60px auto;
   }
 
-  article h2 {
-    font-size: 1.3rem;
-  }
-
-  footer {
-    padding: 30px 40px;
-  }
-
-  .footer-container {
-    flex-direction: row;
+  /* Sección superior: texto + imagen en dos columnas */
+  .historia-header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    text-align: left;
+    gap: 40px;
+    margin-bottom: 40px;
+    width: 100%;
   }
 
-  .footer-legal ul,
-  .footer-social ul {
-    justify-content: flex-start;
-  }
-
-  .footer-center {
-    text-align: center;
+  .historia-header img {
     flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
   }
-}
 
-/* Tablet */
-@media (min-width: 769px){
- nav ul {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+  .historia-header .texto {
+    flex: 1.2;
+  }
+
+  .historia-header .texto h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .historia-header .texto p {
+    font-size: 1.05rem;
+    color: #333;
+  }
+
+  /* Línea de tiempo */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    width: 100%;
+  }
+
+  .timeline-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
     gap: 15px;
   }
 
-  nav li {
-    margin: 5px 10px;
+  .timeline-item img {
+    width: 90px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
   }
 
+  .timeline-item p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Juegos icónicos */
+  .juegos-ps2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    width: 100%;
+  }
+
+  .juego-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .juego-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  }
+
+  .juego-item h4 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #111;
+  }
+
+}
+
+@media (max-width: 768px) {
   header {
-    text-align: center;
-    padding: 15px;
+    padding: 15px 20px;
   }
 
   header img {
     height: 45px;
   }
 
-  .logo {
-    display: flex;
-    justify-content: center;
+  nav ul {
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    gap: 10px;
   }
 
   main {
-    padding: 20px 40px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
   article {
-    width: 90%;
-    max-width: 500px;
-  }
-  article h2 {
-    font-size: 1.3rem;
+    max-width: 90%;
   }
 
-  footer {
-    padding: 30px 40px;
+  .juegos-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin: 60px auto;
+    max-width: 1100px;
+    padding: 0 20px;
   }
 
-  .footer-container {
+  .juego-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+  .juego-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .juego-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .juego-card h3 {
+    font-size: 1.25rem;
+    color: #111;
+    font-weight: 600;
+    margin: 15px 20px 10px;
+  }
+
+  .juego-card p {
+    margin: 0 20px 25px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .historia-container {
+    padding: 25px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  nav ul {
     flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
   }
 
-  .footer-legal ul,
-  .footer-social ul {
-    justify-content: flex-start;
-  }
-
-  .footer-center {
-    text-align: center;
-    flex: 1;
+  article h3 {
+    font-size: 1.4rem;
   }
 }
