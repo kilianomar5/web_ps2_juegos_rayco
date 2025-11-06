@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
-<main>
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <article class="page-content">
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
-    </article>
-  <?php endwhile; endif; ?>
+<main class="pagina-contenido">
+  <?php
+  if (have_posts()) :
+    while (have_posts()) : the_post();
+      the_content();
+    endwhile;
+  endif;
+  ?>
 </main>
 
 <?php get_footer(); ?>

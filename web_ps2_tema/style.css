@@ -2,7 +2,7 @@
 Theme Name: Web PS2 Tema
 Author: Kilian
 Description: Tema básico de web PS2 con noticias y estilo moderno.
-Version: 1.1
+Version: 1.2
 Text Domain: web_ps2_tema
 */
 
@@ -103,154 +103,351 @@ p {
   margin: 0 0 10px;
 }
 
-/* ======== TARJETAS DE JUEGOS ======== */
-.juegos-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 40px auto;
-  max-width: 1100px;
+/* ======== PÁGINAS GENERALES ======== */
+/* Página de Inicio */
+.pagina-inicio {
+  background-color: #f8f9fa;
+  color: #222;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.juego-card {
+/* Hero Inicio */
+.hero-inicio {
+  background: linear-gradient(135deg, #0078ff, #003b7a);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-inicio .contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-inicio h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-inicio p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Reseñas */
+
+.reseñas {
+  padding: 80px 20px;
+  text-align: center;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  flex: 1 1 300px;
-  max-width: 340px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.juego-card img {
+.reseñas .titulo-seccion {
+  color: #0078ff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reseña-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reseña-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.reseña-card p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reseña-card span {
+  color: #0078ff;
+  font-weight: 600;
+}
+
+
+/* Últimas Noticias */
+
+.ultimas-noticias {
+  padding: 80px 20px;
+  background-color: #f2f4f7;
+  text-align: center;
+}
+
+.ultimas-noticias .titulo-seccion {
+  color: #0078ff;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.noticia-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.noticia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.noticia-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
-.juego-card h3 {
-  font-size: 1.2rem;
-  color: #111;
+.noticia-card h3 {
+  font-size: 1.25rem;
+  color: #0078ff;
   font-weight: 600;
-  margin: 15px 15px 5px;
+  margin: 15px 20px 10px;
 }
 
-.juego-card p {
-  margin: 0 15px 20px;
-  color: #555;
+.noticia-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.noticia-card h3 a:hover {
+  color: #005fcc;
+}
+
+.noticia-card p {
+  margin: 0 20px 25px;
+  color: #444;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-.juego-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+/* Categorías */
+.categorias-videojuegos {
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6fa 100%);
+  text-align: center;
+  border-top: 2px solid #e6e6e6;
 }
 
-/* ====== ESTILO DE PÁGINA HISTORIA PS2 ====== */
-.page-id-308 main,
-.page-id-308 .entry-content {
-  display: flex;
-  justify-content: center;
+.categorias-videojuegos .titulo-seccion {
+  color: #0078ff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-.historia-container {
+.categorias-videojuegos .titulo-seccion::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #0078ff;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+.categorias-videojuegos p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.categorias-videojuegos .boton {
+  background-color: #0078ff;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 120, 255, 0.3);
+}
+
+.categorias-videojuegos .boton:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 95, 204, 0.4);
+}
+
+.pagina-contenido {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  max-width: 900px;
-  width: 100%;
-  margin: 40px 20px;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 60px auto;
 }
 
-.historia-container h2,
-.historia-container h3 {
+.pagina-contenido h2,
+.pagina-contenido h3 {
   color: #0078ff;
   margin-bottom: 15px;
 }
 
-.historia-container p {
+.pagina-contenido p {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
 }
 
-.historia-container a.wp-block-button__link,
-.historia-container .boton-historia {
-  background-color: #0078ff;
-  color: #fff !important;
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 10px;
-  transition: background 0.3s;
-}
-
-.historia-container a.wp-block-button__link:hover,
-.historia-container .boton-historia:hover {
-  background-color: #005fcc;
-}
-
-.historia-container img {
+.pagina-contenido img {
   display: block;
   margin: 25px auto;
   border-radius: 10px;
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
 }
 
-/* ====== Línea de tiempo ====== */
+/* ======== SECCIÓN DE JUEGOS ======== */
+.juegos-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.juego-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.juego-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.juego-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.juego-card h3 {
+  font-size: 1.25rem;
+  color: #111;
+  font-weight: 600;
+  margin: 15px 20px 10px;
+}
+
+.juego-card p {
+  margin: 0 20px 25px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ======== LÍNEA DE TIEMPO ======== */
 .timeline {
-  border-top: 2px solid #eee;
-  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px 40px;
   margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid #eee;
+  width: 100%;
 }
 
 .timeline-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 20px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .timeline-item img {
-  width: 70px;
-  height: 50px;
+  width: 100px;
+  height: 70px;
+  border-radius: 8px;
   object-fit: cover;
-  border-radius: 6px;
 }
 
 .timeline-item p {
-  margin: 0;
+  font-size: 0.95rem;
   color: #444;
+  line-height: 1.4;
+  margin: 0;
 }
 
-/* ====== Juegos icónicos ====== */
+/* ======== JUEGOS ICÓNICOS ======== */
 .juegos-ps2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   margin-top: 40px;
   border-top: 2px solid #eee;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 .juego-item {
   text-align: center;
-  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juego-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .juego-item img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 10px;
+  border-radius: 12px 12px 0 0;
   margin-bottom: 10px;
 }
 
 .juego-item h4 {
-  color: #111;
   font-size: 1.1rem;
+  color: #111;
   margin-bottom: 5px;
 }
 
@@ -290,115 +487,666 @@ footer {
   color: #ffcc00;
 }
 
-@media (min-width: 1024px) {
+/* Estilos página Contacto */
+.pagina-contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
 
-  /* Contenedor general */
-  .historia-container {
+.pagina-contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #222;
+}
+
+.pagina-contacto p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.contacto-formulario form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+}
+
+.contacto-formulario label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contacto-formulario input[type="text"],
+.contacto-formulario input[type="email"],
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.contacto-formulario input[type="text"]:focus,
+.contacto-formulario input[type="email"]:focus,
+.contacto-formulario textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+.contacto-formulario input[type="submit"] {
+    width: 200px;
+    padding: 12px;
+    background-color: #0073e6;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.contacto-formulario input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* ======== PÁGINA HISTORIA PS2 ======== */
+.pagina-historia .historia-seccion {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 50px 60px;
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.pagina-historia h2 {
+  color: #0078ff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.pagina-historia p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.pagina-historia .boton-historia {
+  background-color: #1b1b1b;
+  color: #fff !important;
+  padding: 10px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: background 0.3s ease;
+}
+
+.pagina-historia .boton-historia:hover {
+  background-color: #0078ff;
+}
+
+.pagina-historia img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px auto 40px;
+  display: block;
+}
+
+/* Línea de tiempo */
+.pagina-historia .timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px 40px;
+  margin-top: 20px;
+  padding-top: 25px;
+  border-top: 2px solid #eee;
+}
+
+.pagina-historia .timeline-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pagina-historia .timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.pagina-historia .timeline-item img {
+  width: 100px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.pagina-historia .timeline-item p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Juegos */
+.pagina-historia .juegos-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pagina-historia .juego-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pagina-historia .juego-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pagina-historia .juego-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.pagina-historia .juego-card h3 {
+  font-size: 1.25rem;
+  color: #111;
+  font-weight: 600;
+  margin: 15px 20px 10px;
+}
+
+.pagina-historia .juego-card p {
+  margin: 0 20px 25px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pagina-consola {
+  --bg: #f8f9fa;
+  --card: #fff;
+  --txt: #222;
+  --muted: #555;
+  --prim: #0078ff;
+  --bord: #eaecef;
+  --shadow: 0 4px 12px rgba(0,0,0,.08);
+  background: var(--bg);
+  color: var(--txt);
+}
+
+/* Contenedor */
+.pagina-consola .contenedor {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+/* Intro */
+.pagina-consola .consola-intro {
+  padding: clamp(28px, 4vw, 56px) 0;
+  text-align: center;
+  align-items: center;
+}
+.pagina-consola .titulo-seccion {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  color: var(--prim);
+  margin: 0 0 8px;
+}
+.pagina-consola .subtitulo {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Tarjetas lista simple */
+.consola-lista {
+  display: flex;             /* Cambiamos grid a flex para centrar */
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente si hay altura */
+  gap: 22px;
+  margin: 24px auto 40px;
+  flex-wrap: wrap;           /* Permite que otras tarjetas se alineen si hay más */
+}
+
+.consola-card {
+  max-width: 320px;          /* Limitar ancho de la tarjeta */
+  width: 100%;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;        /* Centrar texto dentro de la tarjeta */
+}
+
+.consola-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;            /* Asegura que la imagen se centre */
+}
+
+.consola-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.consola-media img { width: 100%; height: auto; display: block; }
+.consola-info { padding: 16px 18px 20px; }
+.consola-info h2, .consola-info p { color: var(--txt); margin: 0; }
+.consola-info p { color: var(--muted); }
+
+/* ===== Características Técnicas ===== */
+.consola-caracteristicas { 
+  padding: 40px 0; 
+}
+
+.consola-caracteristicas .bloque-titulo {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  color: var(--prim);
+  margin: 0 0 14px;
+  text-align: center;
+}
+.caracter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.caracter-card {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--bord);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.caracter-card img {
+  width: 64px; height: 64px; object-fit: contain;
+}
+.caracter-card h3 {
+  font-size: 1.05rem; margin: 0 0 6px; color: #111;
+}
+.caracter-card p { margin: 0; color: var(--muted); line-height: 1.5; }
+
+/* ===== Versiones ===== */
+.consola-versiones { 
+  padding: 28px 0 10px; 
+}
+
+.consola-versiones .bloque-titulo {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  color: var(--prim);
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.versiones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.version-card {
+  background: var(--card);
+  border: 1px solid var(--bord);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 14px 14px 18px;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.version-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.version-card figure { margin: 0 0 10px; }
+.version-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.version-card h3 {
+  font-size: 1.05rem;
+  margin: 6px 0 6px;
+  color: #111;
+}
+
+.version-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ===========================
+   CATEGORÍAS VIDEOJUEGOS 
+==============================*/
+
+/* Fondo y texto principal en azul oscuro y blanco */
+.categorias-videojuegos {
+  background: #0f223a; /* Azul Navy moderno */
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* Contenedor para modular márgenes y ancho máximo */
+.categorias-videojuegos .contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Título de sección con azul y sombra */
+.categorias-videojuegos .titulo-seccion {
+  font-size: 2.6em;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #0078ff; /* Azul principal del tema */
+  text-shadow: 0 2px 8px rgba(0, 120, 255, 0.08);
+  letter-spacing: 2px;
+}
+
+/* Grid de categorías con espacio y flexibilidad */
+.categorias-videojuegos d {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 30px;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+}
+
+/* Tarjeta individual estilo azul con sombra */
+.categoria-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover: intensa sombra azul claro */
+.categoria-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes con borde azul oscuro */
+.categoria-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 9px;
+  border: 2.5px solid #0078ff; /* Borde azul */
+  margin-bottom: 12px;
+  background: #222f3d;
+}
+
+/* Nombre de la categoría en azul intenso */
+.categoria-card h3 {
+  font-size: 1.3rem;
+  color: #0078ff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.categoria-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.videojuegos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px auto;
+}
+
+.videojuego-card {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 60px 80px;
-    max-width: 1100px;
-    margin: 60px auto;
-  }
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
 
-  /* Sección superior: texto + imagen en dos columnas */
-  .historia-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 40px;
+.videojuego-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.videojuego-img img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.videojuego-info {
+    padding: 15px 20px;
+}
+
+.videojuego-info h2 {
+    font-size: 1.25rem;
+    margin: 0 0 8px;
+    color: #0078ff;
+}
+
+.videojuego-info p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-inicio {
+    padding: 70px 20px 60px;
   }
 
-  .historia-header img {
-    flex: 1;
-    max-width: 400px;
-    border-radius: 10px;
+  .hero-inicio h1 {
+    font-size: 1.9rem;
   }
 
-  .historia-header .texto {
-    flex: 1.2;
+  .reseñas,
+  .ultimas-noticias {
+    padding: 60px 20px;
   }
 
-  .historia-header .texto h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+  .categorias-videojuegos {
+      padding: 60px 15px;
+    }
+
+    .categorias-videojuegos .titulo-seccion {
+      font-size: 1.8rem;
+      margin-bottom: 35px;
+    }
+
+    .categoria-card {
+      padding: 25px 15px;
+    }
+
+    .categoria-card h3 {
+      font-size: 1.15rem;
+    }
+
+  .noticia-card img {
+    height: 180px;
   }
 
-  .historia-header .texto p {
-    font-size: 1.05rem;
-    color: #333;
+  .pagina-historia .historia-seccion {
+      padding: 20px 15px;
+      margin: 20px 10px;
+  }
+
+  .pagina-historia h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .pagina-historia h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .pagina-historia p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .pagina-historia .boton-historia {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+    .pagina-historia img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto 30px;
   }
 
   /* Línea de tiempo */
-  .timeline {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 40px;
-    margin-top: 30px;
+  .pagina-historia .timeline {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
     padding-top: 20px;
-    border-top: 2px solid #eee;
-    width: 100%;
   }
 
-  .timeline-item {
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
+  .pagina-historia .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+    gap: 12px;
+  }
+
+  .pagina-historia .timeline-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pagina-historia .timeline-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .pagina-historia .juegos-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 5px;
+  }
+
+  .pagina-historia .juego-card {
+    padding: 10px 12px;
+  }
+
+  .pagina-historia .juego-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 8px;
+  }
+
+  .pagina-historia .juego-card p {
+    font-size: 0.9rem;
+    margin: 0 0 15px;
+  }
+
+  .caracter-grid {
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
-  .timeline-item img {
-    width: 90px;
-    height: 60px;
-    border-radius: 6px;
-    object-fit: cover;
+  .caracter-card {
+    grid-template-columns: 48px 1fr; /* icono + texto */
+    gap: 12px;
+    padding: 12px;
+    text-align: left;
   }
 
-  .timeline-item p {
-    font-size: 0.95rem;
-    color: #444;
+  .consola-caracteristicas .contenedor {
+    padding: 0 10px;
+  }
+
+  .caracter-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .caracter-card h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .caracter-card p {
+    font-size: 0.9rem;
     line-height: 1.4;
     margin: 0;
   }
 
-  /* Juegos icónicos */
-  .juegos-ps2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 2px solid #eee;
+  .versiones-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .version-card {
+    padding: 12px;
+  }
+
+  .version-card img {
+    max-height: 150px;
+  }
+
+  .pagina-historia .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-historia .timeline-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pagina-historia .timeline-item img {
     width: 100%;
+    height: auto;
   }
 
-  .juego-item img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
 
-  .juego-item img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  }
-
-  .juego-item h4 {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    color: #111;
-  }
-
-}
-
-@media (max-width: 768px) {
   header {
     padding: 15px 20px;
   }
@@ -423,69 +1171,435 @@ footer {
     max-width: 90%;
   }
 
-  .juegos-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin: 60px auto;
-    max-width: 1100px;
-    padding: 0 20px;
-  }
-
-  .juego-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-  .juego-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .juego-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-
-  .juego-card h3 {
-    font-size: 1.25rem;
-    color: #111;
-    font-weight: 600;
-    margin: 15px 20px 10px;
-  }
-
-  .juego-card p {
-    margin: 0 20px 25px;
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .historia-container {
+  .pagina-contenido {
     padding: 25px;
+    margin: 30px 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
   }
 
   .timeline-item {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
   }
 
   .timeline-item img {
     width: 100%;
     height: auto;
   }
+
+  .categorias-videojuegos {
+    padding: 24px 10px;
+  }
+  .categorias-videojuegos .titulo-seccion {
+    font-size: 2em;
+    margin-bottom: 18px;
+  }
+  .categorias-videojuegos .categorias-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .categoria-card {
+    padding: 8px;
+  }
+  .categoria-card img {
+    height: 80px;
+    margin-bottom: 6px;
+  }
+  .categoria-card h3 {
+    font-size: 1em;
+  }
+
+  .hero-inicio { padding: 70px 20px 60px; }
+  .hero-inicio h1 { font-size: 2rem; }
+  .reseñas, .ultimas-noticias, .categorias-videojuegos { padding: 60px 20px; }
+  .reseña-card, .categoria-card, .noticia-card { padding: 20px; }
+
+  .categoria-header {
+    padding: 40px 15px;
+  }
+  .categoria-header h1 {
+    font-size: 1.8rem;
+  }
+  .videojuegos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .juego-detalle {
+    padding: 25px 20px;
+  }
+  .juego-header h1 {
+    font-size: 1.8rem;
+  }
 }
 
-@media (min-width: 769px) {
-  nav ul {
-    flex-direction: row;
+/* ======== PC ANCHO ======== */
+@media (min-width: 1024px) {
+  .hero-inicio h1 {
+    font-size: 3rem;
   }
 
-  article h3 {
-    font-size: 1.4rem;
+  .hero-inicio p {
+    font-size: 1.15rem;
   }
+
+  .noticia-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .reseña-card p {
+    font-size: 1.05rem;
+  }
+
+  .pagina-contenido {
+    padding: 60px 80px;
+    max-width: 1200px;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+  }
+
+  .timeline-item {
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+  }
+
+  .timeline-item img {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+  }
+
+  .juegos-ps2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =======================================================
+   🌐 ESTILOS ESPECÍFICOS DE LA PÁGINA DE INICIO (front-page.php)
+   ======================================================= */
+
+/* === Hero === */
+.hero-inicio {
+  background: linear-gradient(135deg, #0078ff, #003b7a);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.hero-inicio h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+.hero-inicio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* === Reseñas === */
+.reseñas {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.reseña-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reseña-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.reseña-card p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.reseña-card span {
+  color: #0078ff;
+  font-weight: 600;
+}
+
+/* === Últimas Noticias === */
+.ultimas-noticias {
+  background: #f2f4f7;
+  padding: 80px 20px;
+  text-align: center;
+}
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.noticia-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+.noticia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.noticia-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.noticia-card h3 {
+  font-size: 1.3rem;
+  color: #0078ff;
+  margin: 15px 20px 8px;
+}
+.noticia-card p {
+  margin: 0 20px 25px;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* === Categorías === */
+.categorias-videojuegos {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6fa 100%);
+  text-align: center;
+  padding: 90px 20px;
+}
+.categorias-videojuegos .titulo-seccion {
+  color: #0078ff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+}
+.categoria-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+.categoria-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.categoria-card img {
+  border-radius: 10px;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.categoria-card h3 {
+  font-size: 1.3rem;
+  color: #0078ff;
+  margin-bottom: 8px;
+}
+.categoria-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* === Botón === */
+.categorias-videojuegos .boton {
+  background: #0078ff;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 120, 255, 0.3);
+}
+.categorias-videojuegos .boton:hover {
+  background: #005fcc;
+  transform: translateY(-3px);
+}
+
+/* =======================================================
+   🎮 PLANTILLA DE CATEGORÍAS DE VIDEOJUEGOS
+   ======================================================= */
+.pagina-categoria {
+  background: #f5f6f8;
+  padding: 60px 20px;
+}
+
+.categoria-header {
+  background: #1b1b1b;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.categoria-header h1 {
+  font-size: 2.2rem;
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+.categoria-header p {
+  color: #ccc;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid general */
+.videojuegos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.videojuego-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+.videojuego-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Imagen del juego */
+.videojuego-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Info */
+.videojuego-info {
+  padding: 20px 25px 30px;
+}
+
+.videojuego-info h2 {
+  color: #0078ff;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.videojuego-info p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Botón Leer Más */
+.boton-leer-mas {
+  background-color: #0078ff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.boton-leer-mas:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+}
+
+.pagina-juego {
+  background: #f4f5f8;
+  padding: 60px 20px;
+}
+
+.juego-detalle {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  text-align: center;
+}
+
+.juego-header h1 {
+  color: #0078ff;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+}
+
+.juego-imagen {
+  margin-bottom: 30px;
+}
+
+.juego-imagen img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.juego-contenido {
+  text-align: left;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.juego-volver {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.boton-volver {
+  background-color: #0078ff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.boton-volver:hover {
+  background-color: #005fcc;
 }
