@@ -71,10 +71,10 @@ function obtener_primera_imagen($post_id) {
     return isset($matches[1]) ? $matches[1] : '';
 }
 
-function tema_scripts() {
-    wp_enqueue_script('menu-js', get_template_directory_uri() . '/menu.js', array(), false, true);
+function tema_scripts_personalizados() {
+    wp_enqueue_script('menu-js', get_template_directory_uri() . '/menu.js', array(), null, true);
 }
-add_action('wp_enqueue_scripts', 'tema_scripts');
+add_action('wp_enqueue_scripts', 'tema_scripts_personalizados');
 
 ?>
 

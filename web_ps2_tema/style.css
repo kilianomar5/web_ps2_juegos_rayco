@@ -981,32 +981,30 @@ footer {
   height: 22px;
   cursor: pointer;
   z-index: 1002;
+  position: absolute;
+  right: 25px;
+  top: 25px;
 }
 
 .hamburger span {
   display: block;
   height: 3px;
   width: 100%;
-  background: #0078ff;
+  background: #0078ff; 
   border-radius: 3px;
   transition: all 0.4s ease;
 }
 
-.close-menu {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 1.8rem;
-  color: #0078ff;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1003;
+/* Transformación al abrir */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
-
-.hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -1024,7 +1022,6 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     z-index: 1001;
   }
 
@@ -1036,21 +1033,11 @@ footer {
   nav ul {
     flex-direction: column;
     gap: 20px;
-    margin: 0;
-    padding: 0;
   }
 
   nav a {
     color: #fff;
     font-size: 1.1rem;
-  }
-
-  body.menu-open .close-menu {
-    display: block;
-  }
-
-  nav a:hover {
-    color: #0078ff;
   }
 
   .hero-inicio {
@@ -1324,6 +1311,7 @@ footer {
 
   header {
     padding: 15px 20px;
+    position: relative
   }
 
   header img {
