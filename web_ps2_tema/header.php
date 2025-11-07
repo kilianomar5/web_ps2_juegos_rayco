@@ -13,6 +13,14 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
     </div>
 
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Botón cerrar (X) -->
+    <div class="close-menu" id="close-menu">✕</div>
+
     <nav>
         <?php
         wp_nav_menu(array(

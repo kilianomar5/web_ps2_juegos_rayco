@@ -45,8 +45,7 @@ get_header();
             <?php endif; ?>
             <div class="videojuego-info">
               <h2><?php the_title(); ?></h2>
-<a href="<?php echo home_url('/real-racing-3'); ?>" class="boton-leer-mas">Ver Detalles</a>
-
+              <a href="<?php the_permalink(); ?>" class="boton-leer-mas">Ver Detalles</a>
             </div>
           </article>
       <?php
