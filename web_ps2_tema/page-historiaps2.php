@@ -12,7 +12,7 @@ get_header();
     <h2>Historia PS2</h2>
     <p>Esta página muestra la historia de la PS2, con su línea de tiempo, juegos icónicos y curiosidades del legado de la consola más vendida de la historia.</p>
 
-    <a href="#" class="boton-historia">Leer Más</a>
+    <a href="https://vandal.elespanol.com/reportaje/la-historia-de-playstation-2" target="_blank" class="boton-historia">Leer Más</a>
 
     <img src="https://imgs.search.brave.com/nZGNumFLv6w9c4Sqs6G4V-TWAlFMPc1En6hQ6f6xwOE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTE1/NzM2MTc4L3Bob3Rv/L3BsYXlzdGF0aW9u/LTItc2xpbWxpbmUt/Z2FtZS1jb25zb2xl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1mQ29VVGJWRmpp/SzBSYUt6enFsWFVS/N1haR3c1cVFNM3VP/aHdlWlozZGZnPQ" alt="PlayStation 2 clásica">
 

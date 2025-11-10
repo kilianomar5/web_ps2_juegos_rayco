@@ -11,25 +11,8 @@ get_header();
   <section class="hero-inicio">
     <div class="contenedor">
       <h1>KilianVideojuegos</h1>
-      <p>Tu sitio de referencia para noticias, reseñas y curiosidades del mundo de los videojuegos.</p>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE RESEÑAS -->
-  <section class="reseñas">
-    <div class="contenedor">
-      <h2 class="titulo-seccion">Reseñas</h2>
-      <div class="reseñas-grid">
-        <article class="reseña-card">
-          <p>«Un sitio magnífico»</p><span>— Ángel</span>
-        </article>
-        <article class="reseña-card">
-          <p>«Buena página web»</p><span>— Diego</span>
-        </article>
-        <article class="reseña-card">
-          <p>«Se entiende a la perfección»</p><span>— Dylan</span>
-        </article>
-      </div>
+      <p>Esta página es de videojuegos, donde se verá la actividad de rayco, el profesor.</p>
+      <a href="https://github.com/kilianomar5/web_ps2_juegos_rayco/tree/main" target="_blank" class="boton-leermas-inicio">Leer Más</a>
     </div>
   </section>
 
@@ -66,6 +49,24 @@ get_header();
     <div class="contenedor">
       <h2 class="titulo-seccion">Categorías | Videojuegos</h2>
       <a href="<?php echo home_url('/categorias'); ?>" class="boton">Ver Categorías</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE RESEÑAS -->
+  <section class="reseñas">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">Reseñas</h2>
+      <div class="reseñas-grid">
+        <article class="reseña-card">
+          <p>«Un sitio magnífico»</p><span>— Ángel</span>
+        </article>
+        <article class="reseña-card">
+          <p>«Buena página web»</p><span>— Diego</span>
+        </article>
+        <article class="reseña-card">
+          <p>«Se entiende a la perfección»</p><span>— Dylan</span>
+        </article>
+      </div>
     </div>
   </section>
 

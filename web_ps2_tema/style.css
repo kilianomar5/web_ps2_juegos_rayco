@@ -113,42 +113,65 @@ p {
 
 /* Hero Inicio */
 .hero-inicio {
-  background: linear-gradient(135deg, #0078ff, #003b7a);
+  background: url('images/logo.png') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 100px 20px 80px;
-  border-radius: 0 0 40px 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 140px 20px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.hero-inicio .contenedor {
-  max-width: 900px;
+.hero-inicio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  border-radius: 0 0 40px 40px;
+}
+
+.hero-inicio {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.contenedor {
+  max-width: 1120px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero-inicio h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
 
 .hero-inicio p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
+  color: #f0f0f0;
 }
 
 /* Reseñas */
 
 .reseñas {
+  background: #fff;
   padding: 80px 20px;
   text-align: center;
-  background: #fff;
 }
 
 .reseñas .titulo-seccion {
   color: #0078ff;
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 .reseñas-grid {
@@ -160,21 +183,21 @@ p {
 }
 
 .reseña-card {
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   padding: 25px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .reseña-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .reseña-card p {
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #333;
   margin-bottom: 10px;
 }
@@ -184,124 +207,93 @@ p {
   font-weight: 600;
 }
 
-
 /* Últimas Noticias */
 
 .ultimas-noticias {
-  padding: 80px 20px;
-  background-color: #f2f4f7;
-  text-align: center;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .ultimas-noticias .titulo-seccion {
   color: #0078ff;
   font-size: 2rem;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-.noticias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
 .noticia-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  text-align: left;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 20px 18px 16px 18px;
+  text-align: center;
+  width: 320px;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .noticia-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 24px rgba(24, 118, 242, 0.12);
 }
 
 .noticia-card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  display: block;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .noticia-card h3 {
   font-size: 1.25rem;
-  color: #0078ff;
-  font-weight: 600;
-  margin: 15px 20px 10px;
-}
-
-.noticia-card h3 a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.noticia-card h3 a:hover {
-  color: #005fcc;
+  font-weight: 700;
+  margin: 12px 0 8px 0;
+  color: #1876f2;
 }
 
 .noticia-card p {
-  margin: 0 20px 25px;
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.99rem;
+  color: #333;
 }
 
 /* Categorías */
-/* .categorias-videojuegos {
-  padding: 90px 20px;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f6fa 100%);
+.categorias-videojuegos {
+  background: #f0f2fa;
+  padding: 38px 0 28px 0;
   text-align: center;
-  border-top: 2px solid #e6e6e6;
+  border-radius: 18px;
+  margin: 28px 0;
 }
+
 
 .categorias-videojuegos .titulo-seccion {
   color: #0078ff;
   font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.categorias-videojuegos .titulo-seccion::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #0078ff;
-  display: block;
-  margin: 12px auto 0;
-  border-radius: 3px;
-}
-
-.categorias-videojuegos p {
-  color: #444;
-  font-size: 1rem;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .categorias-videojuegos .boton {
   background-color: #0078ff;
   color: #fff;
-  padding: 14px 32px;
+  padding: 14px 35px;
   border-radius: 40px;
   font-weight: 600;
-  display: inline-block;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 120, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 120, 255, 0.25);
 }
 
 .categorias-videojuegos .boton:hover {
   background-color: #005fcc;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 95, 204, 0.4);
-} */
+  transform: translateY(-3px);
+}
 
+/* ======== PÁGINA DE CONTENIDO ======== */
 .pagina-contenido {
   background: #fff;
   border-radius: 12px;
@@ -1006,6 +998,27 @@ footer {
   transform: translateY(-9px) rotate(-45deg);
 }
 
+.boton-leermas-inicio {
+  display: inline-block;
+  background: #1876f2;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 1.15rem;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(24,118,242,0.08);
+  transition: background 0.2s;
+  text-decoration: none;
+  margin-top: 18px;
+  z-index: 10;
+  position: relative;
+}
+
+.boton-leermas-inicio {
+  background: #145dcc;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hamburger {
@@ -1040,11 +1053,7 @@ footer {
     font-size: 1.1rem;
   }
 
-  .hero-inicio {
-    padding: 70px 20px 60px;
-    border-radius: 0 0 25px 25px;
-    background: linear-gradient(135deg, #0078ff, #0047a3);
-  }
+  .hero-inicio { padding: 32px 8px 20px 8px; }
   
   .hero-inicio h1 {
     font-size: 2rem;
@@ -1070,7 +1079,7 @@ footer {
   }
 
   .reseñas .titulo-seccion {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 25px;
   }
 
@@ -1090,6 +1099,10 @@ footer {
   }
 
   .ultimas-noticias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centra horizontalmente */
+    width: 100%;
     padding: 60px 15px;
   }
 
@@ -1098,11 +1111,12 @@ footer {
     margin-bottom: 35px;
   }
 
-  .noticias-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    max-width: 500px;
-    margin: 0 auto;
+  .noticia-card,
+  .reseña-card {
+    width: 90vw;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .noticia-card {
@@ -1130,6 +1144,10 @@ footer {
   .categorias-videojuegos {
     padding: 60px 15px 70px;
     background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    width: 100%;
   }
 
   .categorias-videojuegos .titulo-seccion {
@@ -1448,60 +1466,44 @@ footer {
   }
 }
 
-/* PAGINA DE INICIO */ 
-
-/* === Hero === */
-.hero-inicio {
-  background: linear-gradient(135deg, #0078ff, #003b7a);
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px 80px;
-  border-radius: 0 0 40px 40px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.hero-inicio h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-}
-.hero-inicio p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
 /* === Reseñas === */
-.reseñas {
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
+.reseñas .reseñas-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
 }
-.reseñas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+
 .reseña-card {
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  padding: 25px 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 1px 8px rgba(24,118,242,0.07);
+  padding: 30px 20px 16px 20px;
+  text-align: center;
+  min-width: 220px;
+  max-width: 300px;
+  font-size: 1.05rem;
 }
+
 .reseña-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
+
 .reseña-card p {
   font-style: italic;
   font-size: 1rem;
   color: #333;
   margin-bottom: 10px;
 }
+
 .reseña-card span {
-  color: #0078ff;
-  font-weight: 600;
+  color: #1876f2;
+  font-weight: 700;
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
 }
 
 /* === Últimas Noticias === */
@@ -1516,6 +1518,7 @@ footer {
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
+  align-items: center;
 }
 .noticia-card {
   background: #fff;
