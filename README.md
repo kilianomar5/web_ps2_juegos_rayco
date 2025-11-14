@@ -9,6 +9,7 @@ Las noticias sí serán entradas.
 
 Recuerden que la plantilla tiene que ser full responsive.
 
-<b>ULTIMA ACTUALIZACION: 06/11/25</b>
+<b>ULTIMA ACTUALIZACION: 14/11/25</b>
+<b>Actividad Entregada en el Campus</b>
 
 <img width="433" height="320" alt="logo" src="https://github.com/user-attachments/assets/c3b4df45-8f51-45f3-aa61-8774126cdf8f" />
