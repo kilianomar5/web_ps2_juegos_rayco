@@ -1,56 +1,38 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
+<?php
+/*
+Template Name: Página Noticias
+*/
+get_header();
+?>
 
-<header><?php get_header(); ?></header>
-
-<main>
-    <?php if (have_posts()) : ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <article>
-                <h2><?php the_title(); ?></h2>
-                <?php if (has_post_thumbnail()) {
-                    the_post_thumbnail('medium');
-                } ?>
-                <?php the_excerpt(); ?><br>
-                <a href="<?php the_permalink(); ?>">Leer más</a>
-            </article>
-        <?php endwhile; ?>
-    <?php else : ?>
-        <p>No hay noticias publicadas.</p>
-    <?php endif; ?>
+<main class="noticias-main">
+  <section class="noticias-header">
+    <h2>Últimas Noticias</h2>
+    <p>Mantente al día con las noticias más recientes sobre consolas, juegos y lanzamientos.</p>
+  </section>
+  <section class="noticias-cards">
+    <?php
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 5
+    );
+    $noticias = new WP_Query($args);
+    if($noticias->have_posts()) :
+      while($noticias->have_posts()) : $noticias->the_post(); ?>
+        <article class="noticia-carta">
+          <?php if(has_post_thumbnail()) : ?>
+            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
+          <?php endif; ?>
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <p><?php echo wp_trim_words(get_the_content(), 25, '...'); ?></p>
+        </article>
+      <?php endwhile;
+      wp_reset_postdata();
+    else :
+      echo '<p>No hay noticias disponibles.</p>';
+    endif;
+    ?>
+  </section>
 </main>
 
-<footer>
-    <div class="footer-menus">
-        <div class="footer-legal">
-            <h4>Enlaces Legales</h4>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'menu_legal',
-                'container' => false
-            ));
-            ?>
-        </div>
-
-        <div class="footer-social">
-            <h4>Redes Sociales</h4>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'menu_social',
-                'container' => false
-            ));
-            ?>
-        </div>
-    </div>
-</footer>
-
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>

@@ -72,28 +72,28 @@ get_header();
         <!-- Estándar con lector -->
         <article class="version-card">
           <figure>
-            <img src="https://imgs.search.brave.com/W5jXnSgb80MZshmgB2LFM_2kOwLitM3Ppt-6Rpi_76w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg0MzAyNS1NTEE3/NzU3MzE4MDI4OF8w/NzIwMjQtVi53ZWJw" alt="Versión estándar con lector de discos" loading="lazy">
+            <img src="https://imgs.search.brave.com/Aoa5WuQuNuxBIwk0jnAcgiQTyKMt-cDPh8P5LOWXjio/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL2lt/YWdlcy9nL1hMVUFB/ZVN3OGUxb29BQzEv/cy1sMjI1LmpwZw" alt="Versión PS2 SCPH-10000" loading="lazy">
           </figure>
-          <h3>Versión estándar con lector</h3>
-          <p>Incluye unidad Blu-ray Ultra HD para juegos físicos y reproducción de películas.</p>
+          <h3>Versión PS2 SCPH-10000</h3>
+          <p>Primeras versiones lanzadas solo en Japón, incluían puerto PCMCIA para el adaptador de red, y admite discos fisicos.</p>
         </article>
 
         <!-- Edición Digital -->
         <article class="version-card">
           <figure>
-            <img src="https://imgs.search.brave.com/DL2IaEWivyQShZY75DCKSyljZ7bVRzfqnwGgUclQmxg/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF85/NTg5NzMtTUxNNDQz/MTAzNzA2NjlfMTIy/MDIwLU8tY29uc29s/YS1wbGF5c3RhdGlv/bi01LWVkaWNpb24t/ZGlnaXRhbC1zaW4t/bGVjdG9yLWRlLWRp/c2Nvcy53ZWJw" alt="Edición Digital sin lector" loading="lazy">
-          </figure><br><br><br>
-          <h3>Edición digital (sin lector)</h3><br><br>
-          <p>No tiene unidad de disco; todo se descarga desde la tienda. No admite discos físicos.</p>
+            <img src="https://imgs.search.brave.com/ZA_k-dalW5VI_mOGlxOP5nIuyh_NAC1tVDnW38m-3ig/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yZXRy/b2dhbWVzamFwYW4u/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzEwL0lNR185/Mzc0LmpwZw" alt="Versión PS2 SCPH-30000" loading="lazy">
+          </figure>
+          <h3>Versión PS2 SCPH-30000</h3>
+          <p>Primera versión internacional (Europa, América y Japón), tiene una mejor compatibilidad con juegos de PS1, incluyendo discos fisicos.</p>
         </article>
 
         <!-- Pro -->
         <article class="version-card">
           <figure>
-            <img src="https://imgs.search.brave.com/UrsVa9Kse6RYqop5yV6JDMvcQqrMbTCPJlLgCXJjaxs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jb250/cmFoZWNoaXpvLmVz/Lzc5Ni1sYXJnZV9k/ZWZhdWx0L2NvbnNv/bGEtcmV0cm9ib3gt/MjU2Z2ItdmVyc2lv/bi1wcm8uanBn" alt="Versión Pro rendimiento" loading="lazy">
+            <img src="https://imgs.search.brave.com/Dt7FI5tzs3m2_p-VfCJadkGXBkN-BYTQ0ikNF0qUW4E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cGljY2xpY2tpbWcu/Y29tL3ZTVUFBT1N3/UE9aaFRvOGEvUGxh/eXN0YXRpb24tMi1T/bGltLWNvbnNvbGUt/YmxhY2stU0NQSC03/MDAwMC1KYXBhbi1Q/UzIud2VicA" alt="Versión PS2 SCPH-50000" loading="lazy">
           </figure>
-          <h3>Versión Pro (mejora de rendimiento)</h3>
-          <p>Diseñada para rendimiento superior, con mejoras en GPU/almacenamiento/resolución frente a los otros modelos.</p>
+          <h3>Versión PS2 SCPH-50000</h3>
+          <p>Primera versión de PS2 para Europa, con soporte para discos fisicos, con una mejor compatibilidad con juegos de PS1 y PS2.</p>
         </article>
       </div>
     </div>

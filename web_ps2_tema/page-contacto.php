@@ -13,10 +13,8 @@ get_header();
   </section>
 
   <section class="contacto-formulario">
-    <form action="<?php echo esc_url( admin_url('index.php') ); ?>" method="post"><br>
+    <form action="https://formspree.io/f/xldaenqv" method="POST">
       
-      <input type="hidden" name="action" value="enviar_contacto">
-
       <p>
         <label for="nombre">Nombre:</label><br>
         <input type="text" name="nombre" id="nombre" required>
@@ -32,6 +30,8 @@ get_header();
         <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
       </p>
 
+      <input type="hidden" name="_subject" value="Nuevo Mensaje desde la página de contacto de la actividad de rayco">
+
       <p>
         <input type="submit" value="Enviar Mensaje">
       </p>
@@ -40,5 +40,4 @@ get_header();
   </section>
 
 </main>
-
 <?php get_footer(); ?>

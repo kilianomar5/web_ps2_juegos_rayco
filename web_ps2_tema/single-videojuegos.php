@@ -19,6 +19,14 @@
           <?php the_content(); ?>
         </div>
 
+        <?php
+        // ACF: muestra solo si hay campo gameplay
+        $gameplay = get_field('gameplay');
+        if ($gameplay) {
+            echo '<div class="video-gameplay">'.$gameplay.'</div>';
+        }
+        ?>
+        
         <div class="juego-volver">
           <a href="javascript:history.back()" class="boton-volver">← Volver</a>
         </div>
@@ -27,5 +35,4 @@
     <?php endwhile; endif; ?>
   </div>
 </main>
-
 <?php get_footer(); ?>
