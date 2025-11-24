@@ -753,30 +753,30 @@ footer {
 
 /* Tarjetas lista simple */
 .consola-lista {
-  display: flex;             /* Cambiamos grid a flex para centrar */
-  justify-content: center;   /* Centra horizontalmente */
-  align-items: center;       /* Centra verticalmente si hay altura */
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
   gap: 22px;
   margin: 24px auto 40px;
-  flex-wrap: wrap;           /* Permite que otras tarjetas se alineen si hay más */
+  flex-wrap: wrap;         
 }
 
 .consola-card {
-  max-width: 320px;          /* Limitar ancho de la tarjeta */
+  max-width: 320px;          
   width: 100%;
   background: var(--card);
   border-radius: 12px;
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: transform .2s ease, box-shadow .2s ease;
-  text-align: center;        /* Centrar texto dentro de la tarjeta */
+  text-align: center;    
 }
 
 .consola-media img {
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;            /* Asegura que la imagen se centre */
+  margin: 0 auto;           
 }
 
 .consola-card:hover {
@@ -900,7 +900,7 @@ footer {
   font-size: 2.6em;
   margin-bottom: 32px;
   text-align: center;
-  color: #0078ff; /* Azul principal del tema */
+  color: #0078ff; 
   text-shadow: 0 2px 8px rgba(0, 120, 255, 0.08);
   letter-spacing: 2px;
 }
@@ -934,7 +934,7 @@ footer {
   height: 120px;
   object-fit: cover;
   border-radius: 9px;
-  border: 2.5px solid #0078ff; /* Borde azul */
+  border: 2.5px solid #0078ff; 
   margin-bottom: 12px;
   background: #222f3d;
 }
@@ -1018,7 +1018,7 @@ footer {
   transition: all 0.4s ease;
 }
 
-/* Transformación al abrir */
+/* Animación al activar el menú */
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -1118,7 +1118,7 @@ footer {
 }
 
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none; 
   position: fixed;
   z-index: 9999;
   left: 0; top: 0;
@@ -1316,8 +1316,8 @@ footer {
   }
 
   .noticia-card {
-    margin-left: 5vw !important;   /* Ajusta el valor para el desplazamiento deseado */
-    width: 90vw !important;        /* Controla el ancho */
+    margin-left: 5vw !important;   
+    width: 90vw !important;        
     max-width: 400px;
   }
       
