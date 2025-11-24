@@ -20,7 +20,6 @@
         </div>
 
         <?php
-        // ACF: muestra solo si hay campo gameplay
         $gameplay = get_field('gameplay');
         if ($gameplay) {
             echo '<div class="video-gameplay">'.$gameplay.'</div>';
