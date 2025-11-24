@@ -1,7 +1,7 @@
 /*
 Theme Name: Web PS2 Tema
 Author: Kilian
-Description: Tema básico de web PS2 con noticias y estilo moderno.
+Description: Tema básico de web PS2.
 Version: 1.2
 Text Domain: web_ps2_tema
 */
@@ -912,14 +912,6 @@ footer {
   gap: 30px;
 }
 
-.categorias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto 50px;
-}
-
 /* Tarjeta individual estilo azul con sombra */
 .categoria-card {
   background: #fff;
@@ -1240,8 +1232,10 @@ footer {
   }
 
   .reseñas-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    padding-left: 5vw; 
   }
 
   .reseñas .titulo-seccion {
@@ -1250,9 +1244,10 @@ footer {
   }
 
   .reseña-card {
-    padding: 20px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    margin-left: 0;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: 90vw !important;
+    max-width: 400px;
   }
 
   .reseña-card p {
@@ -1288,7 +1283,7 @@ footer {
     box-sizing: border-box !important;
   }
 
-  .ultimas-noticias .noticias-grid {
+  .ultimas-noticias {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -1306,13 +1301,9 @@ footer {
   }
 
   .noticias-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    width: 100vw;
-    max-width: 100vw;
-    margin: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; 
     padding: 0;
   }
 
@@ -1325,11 +1316,9 @@ footer {
   }
 
   .noticia-card {
-    width: 95vw;
-    max-width: 410px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
+    margin-left: 5vw !important;   /* Ajusta el valor para el desplazamiento deseado */
+    width: 90vw !important;        /* Controla el ancho */
+    max-width: 400px;
   }
       
   .noticia-carta {
